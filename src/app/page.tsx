@@ -1,4 +1,4 @@
-use client";
+"use client";
 
 import { ThemeProvider } from '@/providers/ThemeProvider';
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -9,29 +9,6 @@ import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 import { CheckCircle, Star, Phone } from 'lucide-react';
 
-const assetMap = [
-  {
-    "id": "hero-image",
-    "url": "https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "alt": "A luxurious hotel lobby featuring elegant architecture, rich decor, and comfortable seating under a stained glass ceiling."
-  },
-  {
-    "id": "about-image",
-    "url": "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "alt": "A soft-lit hotel room entrance, welcoming guests with luxury appeal and comfort."
-  },
-  {
-    "id": "testimonial-image",
-    "url": "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "alt": "A soft-lit hotel room entrance, welcoming guests with luxury appeal and comfort."
-  },
-  {
-    "id": "contact-image",
-    "url": "https://images.pexels.com/photos/28999982/pexels-photo-28999982.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-    "alt": "Elegant hotel lobby featuring a vibrant orchid centerpiece on modern reception desk."
-  }
-];
-
 export default function Page() {
   return (
     <ThemeProvider
@@ -39,7 +16,7 @@ export default function Page() {
       defaultTextAnimation="reveal-blur"
       borderRadius="sharp"
     >
-      <div id='nav' data-section='nav'>
+      <div id='nav' data-section='nav' className='scroll-mt-24'>
         <NavbarLayoutFloatingInline
           navItems={[
             { name: 'Home', id: 'home' },
@@ -55,7 +32,7 @@ export default function Page() {
           <HeroSplit
             title="Welcome to Hotel Haven"
             description="Experience luxury and comfort in the heart of the city."
-            imageSrc={assetMap.find(a => a.id === 'hero-image')?.url ?? '/public/images/placeholder.webp'}
+            imageSrc="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             buttons={[{ text: 'Discover More', href: 'about' }]}
           />
         </div>
@@ -84,7 +61,7 @@ export default function Page() {
               role: 'Regular Guest',
               company: 'Corporate',
               rating: 5,
-              imageSrc: assetMap.find(a => a.id === 'testimonial-image')?.url ?? '/public/images/placeholder.webp'
+              imageSrc: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             }]}
           />
         </div>
@@ -96,7 +73,7 @@ export default function Page() {
             tag='Contact Us'
             title='Stay Connected'
             description='For any inquiries, feel free to reach out to our dedicated support team.'
-            imageSrc={assetMap.find(a => a.id === 'contact-image')?.url ?? '/public/images/placeholder.webp'}
+            imageSrc="https://images.pexels.com/photos/28999982/pexels-photo-28999982.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             buttons={[{ text: 'Get in Touch', href: 'mailto:info@hotelhaven.com' }]}
           />
         </div>
