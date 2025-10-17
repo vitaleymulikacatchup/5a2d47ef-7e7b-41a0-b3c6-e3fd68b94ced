@@ -7,7 +7,6 @@ import TextSplitAbout from '@/components/sections/about/TextSplitAbout';
 import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCardOne';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
-import { CheckCircle, Star, Phone } from 'lucide-react';
 
 export default function Page() {
   return (
@@ -74,7 +73,6 @@ export default function Page() {
             title='Stay Connected'
             description='For any inquiries, feel free to reach out to our dedicated support team.'
             imageSrc="https://images.pexels.com/photos/28999982/pexels-photo-28999982.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-            buttons={[{ text: 'Get in Touch', href: 'mailto:info@hotelhaven.com' }]}
           />
         </div>
       </div>
